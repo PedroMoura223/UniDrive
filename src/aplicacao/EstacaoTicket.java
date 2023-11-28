@@ -1,23 +1,21 @@
 package aplicacao;
-import java.util.List;
 
 public class EstacaoTicket extends Estacao {
 
-  public String nomeAdmin;
+    private String nomeAdmin;
 
-    /**
-    * 
-    *
-   */
-  public List<Ticket> gera;
-    public Cliente busca Ticket;
-    /**
-    * 
-    *
-   */
-  public List<Administrador> trabalha;
+    public EstacaoTicket() {
+        this.nomeAdmin = "";
+    }
 
-  public void emitirTicket() {
-  }
+    public String getNomeAdmin() {
+        return nomeAdmin;
+    }
 
+    public void setNomeAdmin(String nomeAdmin) {
+        this.nomeAdmin = nomeAdmin;
+    }
+
+    public void emitirTicket() {
+    }
 }

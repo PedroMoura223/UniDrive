@@ -1,30 +1,19 @@
 package aplicacao;
-import java.util.List;
 
-public class Veiculo extends EstacaoVeiculo {
+public class Veiculo {
 
   public int id;
 
-  public enum tipo;
-
   protected Boolean bateriaRemovivel;
 
-  public int estacao;
+  public String estacao;
 
-    public List<Usuario> usuario;
-    public EstacaoVeiculo faz Parte;
-    public Cliente aluga;
+  public void redefinirEstaticas() {}
 
-  public void redefinirEstaticas() {
-  }
+  public void acelerar() {}
 
-  public void acelerar() {
-  }
+  public void desacelerar() {}
 
-  public void desacelerar() {
-  }
-
-  public void freiar() {
-  }
+  public void freiar() {}
 
 }

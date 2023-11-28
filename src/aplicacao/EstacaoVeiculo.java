@@ -1,18 +1,22 @@
 package aplicacao;
-import java.util.List;
+import java.util.ArrayList;
 
 public class EstacaoVeiculo extends Estacao {
 
-  public ArrayList<Veiculo> listaVeiculos;
+    private ArrayList<Veiculo> listaVeiculos;
 
-    public Cliente busca Veiculo;
-    /**
-    * 
-    *
-   */
-  public List<Veiculo> faz Parte;
+    public EstacaoVeiculo() {
+        this.listaVeiculos = new ArrayList<>();
+    }
 
-  public void destravarVeiculo() {
-  }
+    public ArrayList<Veiculo> getListaVeiculos() {
+        return listaVeiculos;
+    }
 
+    public void setListaVeiculos(ArrayList<Veiculo> listaVeiculos) {
+        this.listaVeiculos = listaVeiculos;
+    }
+
+    public void destravarVeiculo() {
+    }
 }

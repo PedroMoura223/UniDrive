@@ -1,26 +1,38 @@
 package aplicacao;
-import java.util.List;
 
 public class Cliente extends Usuario {
 
-  public float saldo;
+    private double saldo;
+    private int idVeiculo;
 
-  public int idVeiculo;
+    public Cliente() {
+        this.saldo = 0.0;
+        this.idVeiculo = 0;
+    }
 
-    public List<Ticket> ticket;
-    public Ticket possui;
-    public EstacaoTicket busca Ticket;
-    public EstacaoVeiculo busca Veiculo;
-    public Veiculo aluga;
+    public double getSaldo() {
+        return saldo;
+    }
 
-  public void alugarVeiculo() {
-  }
+    public void setSaldo(float saldo) {
+        this.saldo = saldo;
+    }
 
-  public void devolverVeiculo() {
-  }
+    public int getIdVeiculo() {
+        return idVeiculo;
+    }
 
-  public float consultarSaldo() {
-  return 0.0;
-  }
+    public void setIdVeiculo(int idVeiculo) {
+        this.idVeiculo = idVeiculo;
+    }
 
+    public void alugarVeiculo() {
+    }
+
+    public void devolverVeiculo() {
+    }
+
+    public double consultarSaldo() {
+        return 0.0;
+    }
 }

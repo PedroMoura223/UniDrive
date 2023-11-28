@@ -1,9 +1,22 @@
 package aplicacao;
+
 public class MonocicloEletrico extends Veiculo {
 
-  public float valorSensorInclinacao;
+    private double valorSensorInclinacao;
 
-  public void retrairGuidao() {
-  }
+    public MonocicloEletrico() {
 
+        this.valorSensorInclinacao = 0.0;
+    }
+
+    public double getValorSensorInclinacao() {
+        return valorSensorInclinacao;
+    }
+
+    public void setValorSensorInclinacao(double valorSensorInclinacao) {
+        this.valorSensorInclinacao = valorSensorInclinacao;
+    }
+
+    public void retrairGuidao() {
+    }
 }
