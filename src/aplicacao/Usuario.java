@@ -1,6 +1,8 @@
 package aplicacao;
 
 public class Usuario {
+	
+public static int contadorUsuarios;
 
   public int id;
 
@@ -12,4 +14,10 @@ public class Usuario {
 
   public void fazerLogout() {}
 
+  public Usuario() {
+	  Usuario.contadorUsuarios += 1;
+	  
+	  this.id = Usuario.contadorUsuarios;
+  }
+  
 }

@@ -1,28 +1,19 @@
 package aplicacao;
 
 public class Ticket {
-
-	  private int id;
+	
 	  private float creditos;
 
 	  public Ticket(int id, float creditos) {
-	    this.id = id;
 	    this.creditos = creditos;
-	  }
-
-	  public int getId() {
-	    return id;
 	  }
 
 	  public float getCreditos() {
 	    return creditos;
 	  }
-
-	  public void setId(int id) {
-	    this.id = id;
-	  }
-
-	  public void setCreditos(float creditos) {
+	  
+	  
+	  protected void setCreditos(float creditos) {
 	    this.creditos = creditos;
 	  }
 
@@ -30,6 +21,14 @@ public class Ticket {
 		  this.setCreditos(creditos);
 	  }
 
-	  public void realizarPagamento() {
+	  public void realizarPagamento(float pagamento) {
+		  if(pagamento >= this.creditos){
+			  System.out.println("--------------------------------");
+			  System.out.println("Valor insuficiente!");
+			  System.out.println("--------------------------------");
+			  return;
+		  }
+		  
+		  this.creditos -= pagamento;
 	  }
 }
