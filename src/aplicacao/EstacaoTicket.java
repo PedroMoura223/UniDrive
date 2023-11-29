@@ -4,8 +4,10 @@ public class EstacaoTicket extends Estacao {
 
     private String nomeAdmin;
 
-    public EstacaoTicket() {
+    public EstacaoTicket(String nomeADmin, String nomeEstacao) {
         this.nomeAdmin = "";
+        this.id = 0;
+        this.nomeEstacao = "";
     }
 
     public String getNomeAdmin() {
@@ -17,5 +19,6 @@ public class EstacaoTicket extends Estacao {
     }
 
     public void emitirTicket() {
+    	
     }
 }

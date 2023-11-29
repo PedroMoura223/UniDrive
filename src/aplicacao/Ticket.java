@@ -1,22 +1,34 @@
 package aplicacao;
-import java.util.List;
 
 public class Ticket {
 
-  public int id;
+	  private int id;
+	  private float creditos;
 
-  public float creditos;
+	  public Ticket(int id, float creditos) {
+	    this.id = id;
+	    this.creditos = creditos;
+	  }
 
-  public String matricula;
+	  public int getId() {
+	    return id;
+	  }
 
-    public List<Cliente> cliente;
-    public Cliente possui;
-    public EstacaoTicket gera;
+	  public float getCreditos() {
+	    return creditos;
+	  }
 
-  public void adicionarSaldo() {
-  }
+	  public void setId(int id) {
+	    this.id = id;
+	  }
 
-  public void realizarPagamento() {
-  }
+	  public void setCreditos(float creditos) {
+	    this.creditos = creditos;
+	  }
 
+	  public void adicionarSaldo() {
+	  }
+
+	  public void realizarPagamento() {
+	  }
 }

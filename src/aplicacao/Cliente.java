@@ -3,12 +3,15 @@ package aplicacao;
 public class Cliente extends Usuario {
 
     private float saldo;
-
-    public Cliente(int id, String nome, String email, float saldo) {
+    private int idTicket;
+    private int idVeiculo;
+    
+    public Cliente(int id, String nome, String email, float saldo, int idTicket, int idVeiculo) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.saldo = saldo;
+        this.idTicket = 0;
     }
 
     public float getSaldo() {
