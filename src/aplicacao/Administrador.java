@@ -4,9 +4,37 @@ public class Administrador extends Usuario {
 
     private int credencial;
 
-    public Administrador() {
+    
+    public Administrador(int id, String nome, String email, int credencial) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.credencial = credencial;
+    }
 
-        this.credencial = 0;
+
+    public String getNome() {
+        return nome;
+    }
+    
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    public String getEmail() {
+        return email;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    public int getId() {
+        return id;
+    }
+    
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getCredencial() {
