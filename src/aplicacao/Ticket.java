@@ -26,7 +26,8 @@ public class Ticket {
 	    this.creditos = creditos;
 	  }
 
-	  public void adicionarSaldo() {
+	  public void adicionarSaldo(float creditos) {
+		  this.setCreditos(creditos);
 	  }
 
 	  public void realizarPagamento() {

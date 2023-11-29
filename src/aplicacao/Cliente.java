@@ -6,7 +6,7 @@ public class Cliente extends Usuario {
     private int idTicket;
     private int idVeiculo;
     
-    public Cliente(int id, String nome, String email, float saldo, int idTicket, int idVeiculo) {
+    public Cliente(int id, String nome, String email, float saldo, int idTicket) {
         this.id = id;
         this.nome = nome;
         this.email = email;
