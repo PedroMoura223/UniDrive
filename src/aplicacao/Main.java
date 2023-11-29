@@ -3,35 +3,35 @@ import java.util.Scanner;
 
 public class Main {
 	
-	public static void adicionarSaldo(Cliente cliente, Ticket ticket, Scanner scanner) {
+	public static void adicionarSaldo(Cliente cliente, Scanner scanner) {
 		
 		System.out.println("\n --------------------- \n\n [Adicionar Saldo] " + "Olá " + cliente.getNome());
 		System.out.println("\n Qual Valor deseja Adicionar?\r\n ");
 		
         String valorAdicionar = scanner.nextLine();
         
-        ticket.setCreditos(Float.parseFloat(valorAdicionar));
+        cliente.ticket.setCreditos(Float.parseFloat(valorAdicionar));
         
         System.out.println("\n --------------------- \n\n [Adicionar Saldo] " + "Olá " + cliente.getNome());
-		System.out.println("\n Saldo Adicionado com Sucesso! \n Saldo Atual: " + ticket.getCreditos());
+		System.out.println("\n Saldo Adicionado com Sucesso! \n Saldo Atual: " + cliente.ticket.getCreditos());
 		System.out.println("\n Aperte Enter para voltar ao Menu Principal");
 		
 		String resposta = scanner.nextLine();
 		
-		visaoCliente(cliente,ticket,scanner);
+		visaoCliente(cliente,scanner);
 	}
 	
-	public static void consultarSaldo(Cliente cliente, Ticket ticket, Scanner scanner) {
+	public static void consultarSaldo(Cliente cliente,  Scanner scanner) {
 		System.out.println("\n --------------------- \n\n [Consulta Saldo] " + "Olá " + cliente.getNome());
-		System.out.println("\n Saldo Atual: " + ticket.getCreditos());
+		System.out.println("\n Saldo Atual: " + cliente.ticket.getCreditos());
 		System.out.println("\n Aperte Enter para voltar ao Menu Principal");
 		
 		String resposta = scanner.nextLine();
 		
-		visaoCliente(cliente,ticket,scanner);
+		visaoCliente(cliente,scanner);
 	}
 	
-	public static void visaoCliente(Cliente cliente, Ticket ticket, Scanner scanner) {
+	public static void visaoCliente(Cliente cliente,  Scanner scanner) {
 		
 		System.out.println("\n --------------------- \n\n [Menu Cliente] " + "Olá " + cliente.getNome());
 		System.out.println("\n Qual operação deseja realizar?\r\n 1 - Adicionar Saldo \r\n 2 - Consultar Saldo\r\n 3 - Alugar Veículo\r\n \r\n 4 - Sair");
@@ -40,12 +40,12 @@ public class Main {
         
 		if("1".equals(operacao)){
 		
-			adicionarSaldo(cliente,ticket,scanner);
+			adicionarSaldo(cliente,scanner);
 			
 		}
 		if("2".equals(operacao)){
 			
-			consultarSaldo(cliente,ticket,scanner);
+			consultarSaldo(cliente,scanner);
 			
 		}
 	}
@@ -73,11 +73,10 @@ public class Main {
         
         if("1".equals(tipoConta)){
         	
-        	Ticket ticket = new Ticket(1 , 0.00f);
+
+        	Cliente cliente = new Cliente("Pedro Moura", "pedromoura@gmail.com"); 
         	
-        	Cliente cliente = new Cliente(1, "Pedro Moura", "pedromoura@gmail.com", 100.0f, 1); 
-        	
-        	visaoCliente(cliente, ticket, scanner);
+        	visaoCliente(cliente, scanner);
         }
         
         if("2".equals(tipoConta)){

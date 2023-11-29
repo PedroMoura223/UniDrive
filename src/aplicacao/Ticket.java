@@ -4,7 +4,7 @@ public class Ticket {
 	
 	  private float creditos;
 
-	  public Ticket(int id, float creditos) {
+	  public Ticket(float creditos) {
 	    this.creditos = creditos;
 	  }
 
