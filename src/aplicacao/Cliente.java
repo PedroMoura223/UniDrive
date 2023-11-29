@@ -1,60 +1,45 @@
 package aplicacao;
 
+import java.util.Optional;
+
 public class Cliente extends Usuario {
 
-    private float saldo;
-    private int idTicket;
-    private int idVeiculo;
+    private Ticket ticket;
+    private Veiculo veiculo;
     
-    public Cliente(int id, String nome, String email, float saldo, int idTicket, int idVeiculo) {
-        this.id = id;
+    public Cliente(String nome, String email,  int idTicket) {
         this.nome = nome;
         this.email = email;
-        this.saldo = saldo;
-        this.idTicket = 0;
+        
+
+        this.ticket.setCreditos(0);
     }
 
-    public float getSaldo() {
-        return saldo;
-    }
-    
-    public void setSaldo(float saldo) {
-        this.saldo = saldo;
-    }
     
     public String getNome() {
         return nome;
     }
     
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-    
+
     public String getEmail() {
         return email;
     }
     
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    
+
     public int getId() {
         return id;
     }
     
-    public void setId(int id) {
-        this.id = id;
-    }
 
-
-    public void alugarVeiculo() {
-       
+    public void alugarVeiculo(Veiculo veiculo) {
+       this.veiculo = veiculo;
     }
 
     public void devolverVeiculo() {
+    	this.veiculo = null;
     }
 
-    public double consultarSaldo() {
-        return 0.0;
+    public float consultarSaldo() {
+        return this.ticket.getCreditos();
     }
 }

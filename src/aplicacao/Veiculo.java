@@ -1,12 +1,14 @@
 package aplicacao;
 
 public class Veiculo {
-
-  public int id;
+	
+	
 
   protected Boolean bateriaRemovivel;
 
   public String estacao;
+  
+  public float preco;
 
   public void redefinirEstaticas() {}
 
@@ -15,5 +17,7 @@ public class Veiculo {
   public void desacelerar() {}
 
   public void freiar() {}
+  
+
 
 }
