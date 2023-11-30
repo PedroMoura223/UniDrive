@@ -5,9 +5,8 @@ public class EstacaoTicket extends Estacao {
     private String nomeAdmin;
 
     public EstacaoTicket(String nomeADmin, String nomeEstacao) {
-        this.nomeAdmin = "";
-        this.id = 0;
-        this.nomeEstacao = "";
+        this.nomeAdmin = nomeADmin;
+        this.nomeEstacao = nomeEstacao;
     }
 
     public String getNomeAdmin() {
@@ -18,7 +17,7 @@ public class EstacaoTicket extends Estacao {
         this.nomeAdmin = nomeAdmin;
     }
 
-    public void emitirTicket(Cliente cliente) {
-    	cliente.ticket = new Ticket(0.0f);
+    public void emitirTicket(Cliente cliente, String nomeEstacao) {
+    	cliente.ticket = new Ticket(0.0f, nomeEstacao);
     }
 }

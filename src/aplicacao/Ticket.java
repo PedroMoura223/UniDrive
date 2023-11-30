@@ -3,13 +3,20 @@ package aplicacao;
 public class Ticket {
 	
 	  private float creditos;
+	  
+	  private String estacao;
 
-	  public Ticket(float creditos) {
+	  public Ticket(float creditos, String nomeEstacao) {
 	    this.creditos = creditos;
+	    this.estacao = nomeEstacao;
 	  }
 
 	  public float getCreditos() {
 	    return creditos;
+	  }
+	  
+	  public String getEstacaoEmissao() {
+		  return estacao;
 	  }
 	  
 	  
