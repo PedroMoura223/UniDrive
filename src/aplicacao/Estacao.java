@@ -6,5 +6,4 @@ public class Estacao {
 
   public String nomeEstacao;
 
-  public void destravarVeiculo() {}
 }

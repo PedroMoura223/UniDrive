@@ -18,7 +18,7 @@ public class EstacaoTicket extends Estacao {
         this.nomeAdmin = nomeAdmin;
     }
 
-    public void emitirTicket() {
-    	
+    public void emitirTicket(Cliente cliente) {
+    	cliente.ticket = new Ticket(0.0f);
     }
 }

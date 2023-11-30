@@ -1,6 +1,7 @@
 package aplicacao;
 
 public class MonocicloEletrico extends Veiculo {
+	public static float preco = 25.00f;
 
     private double valorSensorInclinacao;
 

@@ -4,7 +4,7 @@ import java.util.Optional;
 
 public class Cliente extends Usuario {
 
-    public Ticket ticket = new Ticket(0.00f);
+    public Ticket ticket;
     private Veiculo veiculo;
     
     public Cliente(String nome, String email) {
@@ -12,7 +12,6 @@ public class Cliente extends Usuario {
         this.email = email;
     }
 
-  
 
 
 	public String getNome() {
@@ -29,16 +28,21 @@ public class Cliente extends Usuario {
         return id;
     }
     
-
-    public void alugarVeiculo(Veiculo veiculo) {
-       this.veiculo = veiculo;
+    public void setVeiculo(Veiculo veiculo) {
+    	this.veiculo = veiculo;
     }
+    
+
 
     public void devolverVeiculo() {
     	this.veiculo = null;
     }
 
     public float consultarSaldo() {
+    	if(this.ticket == null) {
+    		System.out.println("Ticket não encontrado.");
+
+    	}
         return this.ticket.getCreditos();
     }
 }

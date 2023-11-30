@@ -90,6 +90,13 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
+		EstacaoVeiculo veiculoPici = new EstacaoVeiculo("Veiculo - Campus do Pici");
+		EstacaoVeiculo veiculoBenfica = new EstacaoVeiculo("Veiculos - Campus do Pici");
+		
+		EstacaoTicket ticketPici = new EstacaoTicket("Igor Neves", "Ticket - Campus do Pici");
+		EstacaoTicket ticketBenfica = new EstacaoTicket("Gustavo Cassimiro", "Ticket - Campus do Benfica");
+		
+		
 		Menu();
 		
 	}
