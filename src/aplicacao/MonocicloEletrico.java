@@ -2,6 +2,8 @@ package aplicacao;
 
 public class MonocicloEletrico extends Veiculo {
 	public static float preco = 25.00f;
+ 
+	public String tipo = "Monocilo Elétrico";
 
     private double valorSensorInclinacao;
 
@@ -20,5 +22,9 @@ public class MonocicloEletrico extends Veiculo {
 
     public void retrairGuidao() {
     	System.out.println("Pronto pra ser guardado!");
+    }
+    
+    public String getTipo() {
+    	return tipo;
     }
 }

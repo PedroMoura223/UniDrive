@@ -10,14 +10,18 @@ public class EstacaoTicket extends Estacao {
     }
 
     public String getNomeAdmin() {
-        return nomeAdmin;
+        return this.nomeAdmin;
     }
-
+    
+    public String getNomeEstacao() {
+    	return this.nomeEstacao;
+    }
+    
     public void setNomeAdmin(String nomeAdmin) {
         this.nomeAdmin = nomeAdmin;
     }
 
-    public void emitirTicket(Cliente cliente, String nomeEstacao) {
-    	cliente.ticket = new Ticket(0.0f, nomeEstacao);
+    public void emitirTicket(Cliente cliente, EstacaoTicket estacaoTicket, EstacaoVeiculo estacaoVeiculo) {
+    	cliente.ticket = new Ticket(0.0f, estacaoTicket, estacaoVeiculo);
     }
 }

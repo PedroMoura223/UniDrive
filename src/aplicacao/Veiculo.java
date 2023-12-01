@@ -2,9 +2,7 @@ package aplicacao;
 
 public class Veiculo {
 	
-	
-
-  protected Boolean bateriaRemovivel;
+protected Boolean bateriaRemovivel;
 
   public String estacao;
   
@@ -16,8 +14,8 @@ public class Veiculo {
 
   public void desacelerar() {}
 
-  public void freiar() {}
+  public void freiar() {} 
+   
   
 
-
-}
+} 

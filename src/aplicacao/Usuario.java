@@ -15,9 +15,25 @@ public static int contadorUsuarios;
   public void fazerLogout() {}
 
   public Usuario() {
-	  Usuario.contadorUsuarios += 1;
+	  Usuario.contadorUsuarios += 1; 
 	  
 	  this.id = Usuario.contadorUsuarios;
   }
+  
+  public int getId() {
+      return id;
+  }
+
+	public String getNome() {
+      return nome;
+  }
+  
+
+  public String getEmail() {
+      return email;
+  }
+  
+
+ 
   
 }

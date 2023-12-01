@@ -2,47 +2,33 @@ package aplicacao;
 
 public class Administrador extends Usuario {
 
-    private int credencial;
+    private String credencial;
+    
+    private String estacao;
 
     
-    public Administrador(int id, String nome, String email, int credencial) {
-        this.id = id;
+    public Administrador(String nome, String email, String credencial) {
+
         this.nome = nome;
         this.email = email;
         this.credencial = credencial;
+        
+        if(credencial == "1234") {
+        	this.estacao = "Ticket - Campus do Benfica";
+        }else if (credencial == "4321") {
+        	this.estacao = "Ticket - Campus do Pici";
+        }
     }
 
 
-    public String getNome() {
-        return nome;
-    }
-    
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-    
-    public String getEmail() {
-        return email;
-    }
-    
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    
-    public int getId() {
-        return id;
-    }
-    
-    public void setId(int id) {
-        this.id = id;
-    }
+ 
 
-    public int getCredencial() {
+    public String getCredencial() {
         return credencial;
     }
-
-    public void setCredencial(int credencial) {
-        this.credencial = credencial;
+    
+    public String getEstacao() {
+    	return estacao;
     }
 
     public void cadastrarVeiculo() {
