@@ -1,9 +1,22 @@
 package aplicacao;
+
 public class BicicletaEletrica extends Veiculo {
 
-  public Boolean assistenciaEletricaAtiva;
+    private Boolean assistenciaEletricaAtiva;
 
-  public void ativarAssistenciaEletrica() {
-  }
+    public BicicletaEletrica(int id, String tipo, String estacao, Boolean assistenciaEletricaAtiva) {
+        super(id, tipo, estacao);
+        this.assistenciaEletricaAtiva = assistenciaEletricaAtiva;
+    }
 
+    public Boolean getAssistenciaEletricaAtiva() {
+        return assistenciaEletricaAtiva;
+    }
+
+    public void setAssistenciaEletricaAtiva(Boolean assistenciaEletricaAtiva) {
+        this.assistenciaEletricaAtiva = assistenciaEletricaAtiva;
+    }
+
+    public void ativarAssistenciaEletrica() {
+    }
 }

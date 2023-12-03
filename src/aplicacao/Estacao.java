@@ -2,9 +2,10 @@ package aplicacao;
 
 public class Estacao {
 
-  public int id;
+	public int id;
 
-  public String nomeEstacao;
+	public String nomeEstacao;
 
-  public void destravarVeiculo() {}
+	public void destravarVeiculo() {
+	}
 }

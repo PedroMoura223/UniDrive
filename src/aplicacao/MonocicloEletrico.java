@@ -4,9 +4,9 @@ public class MonocicloEletrico extends Veiculo {
 
     private double valorSensorInclinacao;
 
-    public MonocicloEletrico() {
-
-        this.valorSensorInclinacao = 0.0;
+    public MonocicloEletrico(int id, String tipo, String estacao, double valorSensorInclinacao) {
+        super(id, tipo, estacao);
+        this.valorSensorInclinacao = valorSensorInclinacao;
     }
 
     public double getValorSensorInclinacao() {

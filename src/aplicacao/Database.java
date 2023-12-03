@@ -1,28 +1,21 @@
 package aplicacao;
-import java.io.*;
-import java.lang.reflect.Constructor;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
-import Controllers.ControllerVeiculo;
+import Controllers.ControllerUsuario;
 
 public class Database {
-    private String nomeArquivo;
+	private String nomeArquivo;
 
-    public Database(String nomeArquivo) {
-        this.nomeArquivo = nomeArquivo;
-    }
-    
-    public static void main(String[] args) {
-    	Veiculo bike1 = new Veiculo(1, "bike", "estacao1");
-        Veiculo bike2 = new Veiculo(2, "bike2", "estacao2");
-        
-        ControllerVeiculo.salvarVeiculoNoArquivo(bike1);
-        ControllerVeiculo.salvarVeiculoNoArquivo(bike2);
-        
-        ControllerVeiculo.obterVeiculoPorId(2);
-        
-        
-    }
+	public Database(String nomeArquivo) {
+		this.nomeArquivo = nomeArquivo;
+	}
+
+	public static void main(String[] args) {
+
+		
+		
+		Administrador admin = new Administrador(1, "Admin", "admin@example.com", 123);
+        admin.cadastrarVeiculo();
+
+        admin.emitirRelatorio();
+
+	}
 }
